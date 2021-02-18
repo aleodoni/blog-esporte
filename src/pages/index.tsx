@@ -6,6 +6,7 @@ import PrismicDOM from 'prismic-dom';
 import { GetStaticProps, NextPage } from 'next';
 import { client } from '@/lib/prismic';
 
+import { formatDate } from '@/lib/format';
 import Layout from '@/components/Layout';
 import Box from '@/components/Box';
 
@@ -25,6 +26,7 @@ const Home: NextPage<IHome> = ({ header, posts }: IHome) => {
           <h1>
             {ReactHtmlParser(PrismicDOM.RichText.asText(post.data.title))}
           </h1>
+          <span className="date">{formatDate(post.last_publication_date)}</span>
           <p>{post.data.body[1].primary.text[0].text}</p>
         </Box>
       ))}

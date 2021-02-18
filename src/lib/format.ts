@@ -7,7 +7,9 @@ export const formatSlug = (title: string): string => {
   return removeBar;
 };
 
-export const formatDate = (date: string): string => {
+export const formatDate = (date: string | null): string => {
+  if (!date) return 'Atual';
+
   const parsedDate = parseISO(date);
   try {
     const formattedDate = format(parsedDate, "dd'/'MM'/'yyyy");

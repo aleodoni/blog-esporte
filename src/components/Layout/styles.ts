@@ -54,7 +54,7 @@ export const Header = styled.div<IHeaderProps>`
       font-size: 60px;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 600px) {
       font-size: 30px;
     }
 
