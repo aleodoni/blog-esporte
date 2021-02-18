@@ -1,7 +1,8 @@
-import React from 'react';
-import Link from 'next/link'
+import React from 'react'      
 
 import { Container, Header, Wrapper } from './styles';
+
+import Footer from '@/components/Footer';
 
 interface IProps {
   image: string,
@@ -10,15 +11,20 @@ interface IProps {
 const Layout: React.FC<IProps> = ({ children, image }) => {
 
   return (
-    <Container>
-      <Wrapper>
-        <Header backgroundImage={image}>
-          <h1>aleodoni Sports Blog</h1>
-        </Header>
-        <div className="main">{children}</div>
-      </Wrapper>
-    </Container>
+    <>
+      <Container>
+        <Wrapper>
+          <Header backgroundImage={image}>
+            <h1>aleodoni Sports Blog</h1>
+          </Header>
+          <div className="main">{children}</div>
+          
+        </Wrapper>
+        
+      </Container>
+      <Footer />
+    </>
   )
 }
 
-export default Layout;
+export default Layout

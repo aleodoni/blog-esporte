@@ -32,7 +32,7 @@ export default function Home({ header, posts }: IHome ) {
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const header = await client().getSingle('header', null);
+  const header = await client().getSingle('header', {});
 
   const posts = await client().query([
     Prismic.Predicates.at('document.type', 'post1')
