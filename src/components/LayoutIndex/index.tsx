@@ -7,7 +7,7 @@ interface IProps {
   image: string;
 }
 
-const Layout: React.FC<IProps> = ({ children, image }) => (
+const LayoutIndex: React.FC<IProps> = ({ children, image }) => (
   <>
     <Container>
       <Wrapper>
@@ -21,4 +21,4 @@ const Layout: React.FC<IProps> = ({ children, image }) => (
   </>
 );
 
-export default Layout;
+export default LayoutIndex;

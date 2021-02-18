@@ -18,7 +18,6 @@ export const Wrapper = styled.div`
 
 export const FooterContainer = styled.div`
   display: flex;
-  
 
   width: 100%;
   height: 80px;

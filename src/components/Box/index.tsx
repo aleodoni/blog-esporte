@@ -10,11 +10,9 @@ const Box: React.FC<IProps> = ({ children, img }) => {
   return (
     <Container>
       <BackImg src={img} />
-      <WrapNews>
-        {children}  
-      </WrapNews>
+      <WrapNews>{children}</WrapNews>
     </Container>
-  )
-}
+  );
+};
 
 export default Box;
