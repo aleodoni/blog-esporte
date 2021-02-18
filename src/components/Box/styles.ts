@@ -116,7 +116,6 @@ export const BackImg = styled.div<IBackImgProps>`
   display: flex;
 
   border-radius: 5px;
-  /* min-width: 30%; */
   width: 40%;
   height: 100%;
   margin-right: 15px;
